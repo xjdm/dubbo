@@ -22,6 +22,7 @@ public interface DemoService {
 
     String sayHello(String name);
 
+    // 异步调用
     default CompletableFuture<String> sayHelloAsync(String name) {
         return CompletableFuture.completedFuture(sayHello(name));
     }
